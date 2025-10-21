@@ -1,0 +1,81 @@
+html, body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+  
+    background-color: #1111117f;
+    border: 3px solid #aa44ff5f;
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 0 20px #5555557f;
+    display: inline-block;
+
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+  }
+  
+  .container img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .buttons a {
+    padding: 10px 10px;
+    display: inline-block;
+  }
+
+  .link {
+    position: relative;
+    text-align: center;
+    opacity: 1;
+    transition: 0.25s;
+
+    background-color: #ffffff00;
+    padding: 5px 5px;
+    border-radius: 20px;
+  }
+
+  .link img {
+    fill: black;
+    width: 50px;
+    transition: 0.25s;
+  }
+
+  .link:hover {
+    background-color: #aa44ffff;
+  }
+
+  .link:active {
+    background-color: #ffffffff;
+    transition: 0s;
+    color: black;
+  }
+  
+  @font-face {
+    font-family: "JetBrains";
+    src: url("jetbrains/JetBrainsMono-Light.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1;}
+  }
