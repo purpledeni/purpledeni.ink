@@ -4,6 +4,7 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
+    overflow: hidden; 
 
     display: flex;
     justify-content: center;
@@ -11,24 +12,22 @@ html, body {
     min-height: 100vh;
   }
 
+  canvas { 
+    display: block; 
+}
   .container {
-    position: relative;
+    position: fixed;
     text-align: center;
     opacity: 0;
     animation: fadeIn 1.5s ease forwards;
   
-    background-color: #1111117f;
-    border: 3px solid #aa44ff5f;
+    line-height: 5px;
+    background-color: #2f2f2f5f;
+    backdrop-filter: blur(25px);
     border-radius: 20px;
-    padding: 30px 40px;
-    box-shadow: 0 0 20px #5555557f;
+    padding: 10px 40px;
+    box-shadow: 0 0 30px #000000ff;
     display: inline-block;
-
-    user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
   }
   
   .container img {
@@ -53,17 +52,16 @@ html, body {
   }
 
   .link img {
-    fill: black;
     width: 50px;
     transition: 0.25s;
   }
 
   .link:hover {
-    background-color: #aa44ffff;
+    background-color: #ffffff1f;
   }
 
   .link:active {
-    background-color: #ffffffff;
+    background-color: #aa44ffff;
     transition: 0s;
     color: black;
   }
@@ -76,6 +74,16 @@ html, body {
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; }
+    from { opacity: 0;}
     to { opacity: 1;}
+  }
+
+  .credit {
+    padding: 10px, -30px;
+  }
+
+  .credit p {
+    font-family: "JetBrains";
+    color: #ffffff4f;
+    display: inline-block;
   }
